@@ -1,0 +1,19 @@
+static void bubbleSort(int[] arr) {
+	int n = arr.length;
+	boolean swapped;
+	while (true) {
+		swapped = false;
+		for (int i = 1; i < n; i++) {
+			if (arr[i - 1] > arr[i]) {
+				int temp = arr[i - 1];
+				arr[i - 1] = arr[i];
+				arr[i] = temp;
+				swapped = true;
+			}
+		}
+
+		if (swapped == false) {
+			break;
+		}
+	}
+}
